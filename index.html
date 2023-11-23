@@ -244,14 +244,7 @@
             <ul id="taskList" class="list-group">
             </ul>
         </div>
-        <div class="animation-container">
-            <img id="image1" class="animated-image"
-                src="https://purepng.com/public/uploads/large/purepng.com-film-reelobjectsfilm-reelcamera-object-tape-movie-film-cinema-picture-video-reel-strip-631522326002pifem.png"
-                alt="Image 1" width="480">
-            <img id="image2" class="animated-image" src="https://pngimg.com/uploads/mario/mario_PNG118.png"
-                alt="Image 2" width="400">
-
-        </div>
+       
         <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top" type="button"
             class="btn btn-dark">Top</button>
 
@@ -265,29 +258,6 @@
             }
         </script>
 
-
-        <script>const image1 = document.getElementById('image1');
-            const image2 = document.getElementById('image2');
-
-            let isImage1Visible = true;
-
-            function toggleImages() {
-                if (isImage1Visible) {
-                    image1.style.transform = 'translateX(200px)';
-                    image1.style.opacity = 0;
-                    image2.style.transform = 'translateX(0)';
-                    image2.style.opacity = 1;
-                } else {
-                    image1.style.transform = 'translateX(0)';
-                    image1.style.opacity = 1;
-                    image2.style.transform = 'translateX(-200px)';
-                    image2.style.opacity = 0;
-                }
-                isImage1Visible = !isImage1Visible;
-            }
-
-            setInterval(toggleImages, 2000); 
-        </script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
