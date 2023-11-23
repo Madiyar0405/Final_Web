@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Us_2019_film_logo.svg/2297px-Us_2019_film_logo.svg.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Us_2019_film_logo.svg/2297px-Us_2019_film_logo.svg.png">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Us_2019_film_logo.svg/2297px-Us_2019_film_logo.svg.png"
+                    alt="" width="100">
+            </a>
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="films.html">Films</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz.html">Quiz</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+
+
+        <div class="container">
+            <h1 class="mt-4 mb-4">Movie quiz</h1>
+            <div id="timerReport" class="mb-3 alert alert-info"></div>
+
+            <form id="quizForm">
+
+                <!-- Вопросы и варианты ответов -->
+                <div class="mb-3">
+                    <label for="q1">1. Какой фильм получил Оскар в 1994 году как лучший фильм?</label>
+                    <select class="form-select" id="q1" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Форрест Гамп</option>
+                        <option value="b">Подозрительные лица</option>
+                        <option value="c">Титаник</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="q2">2. Кто сыграл главную роль в фильме "Матрица"?</label>
+                    <select class="form-select" id="q2" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Киану Ривз</option>
+                        <option value="b">Брэд Питт</option>
+                        <option value="c">Леонардо ДиКаприо</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="q3">3. Какой фильм получил Оскар в 1999 году как лучший фильм?</label>
+                    <select class="form-select" id="q3" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Зеленая миля</option>
+                        <option value="b">Красота по-американски</option>
+                        <option value="c">Матрица</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="q4">4. Кто режиссер фильма "Властелин колец: Братство Кольца"?</label>
+                    <select class="form-select" id="q4" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Питер Джексон</option>
+                        <option value="b">Кристофер Нолан</option>
+                        <option value="c">Стивен Спилберг</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="q5">5. Какой актер сыграл главную роль в фильме "Леон: Профессионал"?</label>
+                    <select class="form-select" id="q5" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Жан Рено</option>
+                        <option value="b">Аль Пачино</option>
+                        <option value="c">Роберт Де Ниро</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="q6">6. Какой фильм получил Золотую пальмовую ветвь на Каннском кинофестивале 2010
+                        года?</label>
+                    <select class="form-select" id="q6" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Дневник баскетбольного фаната</option>
+                        <option value="b">Ла-Ла Ленд</option>
+                        <option value="c">Виноваты звезды</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="q7">7. Какой фильм считается самым кассовым в истории кинематографа?</label>
+                    <select class="form-select" id="q7" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Аватар</option>
+                        <option value="b">Мстители: Финал</option>
+                        <option value="c">Титаник</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="q8">8. Кто сыграл роль Тайлера Дёрдена в фильме "Бойцовский клуб"?</label>
+                    <select class="form-select" id="q8" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Брэд Питт</option>
+                        <option value="b">Эдвард Нортон</option>
+                        <option value="c">Джаред Лето</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="q9">9. Какой фильм получил Оскар в 2017 году как лучший фильм?</label>
+                    <select class="form-select" id="q9" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Ла-Ла Ленд</option>
+                        <option value="b">Мстители: Финал</option>
+                        <option value="c">Форма воды</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="q10">10. Кто срежиссировал фильм "Интерстеллар"?</label>
+                    <select class="form-select" id="q10" required>
+                        <option value="">Выберите ответ</option>
+                        <option value="a">Кристофер Нолан</option>
+                        <option value="b">Дени Вильнёв</option>
+                        <option value="c">Джей Джей Абрамс</option>
+                    </select>
+                </div>
+
+
+
+                <!-- Добавьте остальные вопросы здесь -->
+
+                <button type="button" class="btn btn-primary" onclick="submitQuiz()">Проверить ответы</button>
+            </form>
+
+            <!-- Результаты квиза будут отображены здесь -->
+            <div id="quizResults" class="mt-4"></div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chatModal">
+                Open Chat
+            </button>
+
+            <!-- Add this modal at the end of your HTML body -->
+            <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="chatModalLabel">Chat Window</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Add your chat content here, such as a form for user feedback -->
+                            <form id="chatForm">
+                                <div class="mb-3">
+                                    <label for="message">Chat Message:</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="sendMessage()">Send
+                                    Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top" type="button"
+            class="btn btn-dark">Top</button>
+
+        <script>
+            // Your existing scripts here
+
+            // Add the function for scrolling to the top
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+            }
+        </script>
+
+        <script>
+            function sendMessage() {
+                // Get the message from the textarea
+                const message = document.getElementById('message').value;
+
+                // Add your logic to handle the message, for example, send it to a server or display it on the page
+                // You can customize this part based on your requirements
+
+                // Clear the textarea after sending the message
+                document.getElementById('message').value = '';
+
+                // Close the modal
+                $('#chatModal').modal('hide');
+            }
+        </script>
+
+
+
+
+        <!-- Bootstrap JS, Popper.js, and jQuery (необходимы для некоторых Bootstrap компонентов) -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+        <!-- Ваш собственный JavaScript -->
+        <script>
+
+            let timeLeft = 100; // Set the initial time in seconds
+
+            function startTimer() {
+                setInterval(function () {
+                    document.getElementById('timerReport').innerText = `Осталось времени: ${timeLeft} секунд`;
+                    timeLeft--;
+
+                    // Check if time is up
+                    if (timeLeft < 0) {
+                        submitQuiz(); // Automatically submit the quiz when time is up
+                    }
+                }, 1000);
+            }
+            function submitQuiz() {
+                // Получаем значения ответов
+                const q1 = document.getElementById('q1').value;
+                const q2 = document.getElementById('q2').value;
+                const q3 = document.getElementById('q3').value;
+                const q4 = document.getElementById('q4').value;
+                const q5 = document.getElementById('q5').value;
+                const q6 = document.getElementById('q6').value;
+                const q7 = document.getElementById('q7').value;
+                const q8 = document.getElementById('q8').value;
+                const q9 = document.getElementById('q9').value;
+                const q10 = document.getElementById('q10').value;
+                // Добавьте остальные ответы здесь
+
+                // Подсчитываем количество правильных ответов
+                let correctAnswers = 0;
+                if (q1 === 'a') correctAnswers++;
+                if (q2 === 'a') correctAnswers++;
+                if (q3 === 'b') correctAnswers++;
+                if (q4 === 'a') correctAnswers++;
+                if (q5 === 'a') correctAnswers++;
+                if (q6 === 'c') correctAnswers++;
+                if (q7 === 'a') correctAnswers++;
+                if (q8 === 'a') correctAnswers++;
+                if (q9 === 'c') correctAnswers++;
+                if (q10 === 'a') correctAnswers++;
+
+                // Добавьте остальные проверки здесь
+
+                // Выводим результаты
+                const resultsContainer = document.getElementById('quizResults');
+                resultsContainer.innerHTML = `<h3>Результаты квиза:</h3>
+                                    <p>Правильных ответов: ${correctAnswers}/10</p>`;
+                if (correctAnswers === 10) {
+                    resultsContainer.innerHTML += `<p>Поздравляем! Вы ответили на все вопросы правильно. Вы получаете купон на скидку!</p>`;
+                    // Добавьте здесь код для генерации купона и его отображения
+                    // Например: resultsContainer.innerHTML += `<p>Ваш купон: <span class="coupon-code">XYZ123</span></p>`;
+                }
+            }
+
+            startTimer();
+
+        </script>
+
+</body>
+
+</html>
